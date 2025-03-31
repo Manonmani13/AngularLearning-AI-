@@ -1,0 +1,39 @@
+<div>
+  <form (ngSubmit)="Save()">
+    <h4>Login Page</h4>
+
+    <!-- User Name -->
+    UserName:
+    <input type="text" [(ngModel)]="username" name="username" required/>
+    <br><br>
+
+    <!-- Password -->
+    Password:
+    <input type="password" [(ngModel)]="password" name="password" required/>
+    <br><br>
+
+    <!-- Confirm Password -->
+    Confirm Password:
+    <input type="password" [(ngModel)]="confirmpassword" name="confirmpassword" required/>
+    <br><br>
+
+    <!-- Gender -->
+    Gender:
+    <input type="radio" [(ngModel)]="gender" value="Male" name="gender" required/> Male
+    <input type="radio" [(ngModel)]="gender" value="Female" name="gender" required/> Female
+    <br><br>
+
+    <!-- Country Dropdown -->
+    Country:
+    <select [(ngModel)]="selectedCountry" name="country" id="country" required>
+      <option *ngFor="let country of countries" [value]="country.code">
+        {{ country.name }}
+      </option>
+    </select>
+    <br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Register"/>
+    <br><br>
+  </form>
+</div>
