@@ -1,0 +1,23 @@
+<script>
+function validateValues(n1,n2,ope){
+if(isNaN(n1)){
+return "Invalid ";
+}
+else if(isNaN(n2))
+{
+return "Invalid";
+}
+else{
+return ope(n1,n2)
+}
+}
+
+function sum(n1,n2){
+return(n1+n2)
+}
+function mul(n1,n2){
+return(n1*n2)
+}
+var rv=validateValues(100,100,sum)
+alert(rv);
+</script>
